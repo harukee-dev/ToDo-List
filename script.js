@@ -26,9 +26,9 @@ buttonAddNode.addEventListener("click", function () {
     buttonDoneNode.addEventListener("click", function (event) {
       doneTodosDiv.innerHTML =
         doneTodosDiv.innerHTML +
-        `</br> ${
+        `<div class="todo-done-task">· ${
           document.querySelector(`.input${event.target.className[14]}`).value
-        }`;
+        }</div>`;
       document
         .querySelector(`.div${event.target.className[14]}`)
         .remove(todoDiv);

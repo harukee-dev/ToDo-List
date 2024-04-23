@@ -1,17 +1,105 @@
+* {
+  background-color: rgb(147, 147, 186);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.todo-header-title {
+  font-size: 64px;
+  text-align: center;
+  color: white;
+}
+
 .new-todo {
   display: flex;
   align-items: center;
 }
 
 .todo-button {
-  width: 50px;
-  height: 20px;
+  margin: 20px 5px 0 0;
+  width: 70px;
+  height: 22px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(122, 110, 252);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.371);
+  color: white;
+  transition: 100ms;
+}
+
+.todo-button:hover {
+  background-color: rgb(141, 131, 255);
 }
 
 .input-todo-div {
+  width: 200px;
+  margin: 20px 10px 0 782px;
   border: none;
+  background-color: white;
+  outline: none;
+  border-radius: 5px;
+  text-align: center;
+  height: 20px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.269);
+  transition: 100ms;
+}
+
+.input-todo-div:hover {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.692);
+}
+
+.div-todos {
+  margin: 30px 0 0 0;
 }
 
 .done-todos-div {
   display: block;
+}
+
+.input-add {
+  margin: 0 0 0 780px;
+  width: 300px;
+  height: 30px;
+  background-color: white;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.361);
+  transition: 100ms;
+}
+
+.input-add:hover {
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.504);
+}
+
+.button-add {
+  width: 50px;
+  height: 30px;
+  background-color: rgb(109, 96, 255);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.361);
+  transition: 100ms;
+}
+
+.button-add:hover {
+  background-color: rgb(132, 120, 255);
+}
+
+.button-add:active {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.722);
+  margin: 0 0 0 2px;
+}
+
+.done-todos-title {
+  font-size: 24px;
+  color: rgb(64, 60, 97);
+  margin: 50px 0 0 745px;
+}
+
+.todo-done-task {
+  margin: 10px 0 0 745px;
+  color: rgb(64, 60, 97);
 }
