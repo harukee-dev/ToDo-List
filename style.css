@@ -10,9 +10,15 @@
   color: white;
 }
 
+.new-todo-container {
+  text-align: center;
+}
+
 .new-todo {
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin: 0 0 0 10px;
 }
 
 .todo-button {
@@ -33,7 +39,7 @@
 
 .input-todo-div {
   width: 200px;
-  margin: 20px 10px 0 782px;
+  margin: 20px 10px 0 0;
   border: none;
   background-color: white;
   outline: none;
@@ -57,7 +63,6 @@
 }
 
 .input-add {
-  margin: 0 0 0 780px;
   width: 300px;
   height: 30px;
   background-color: white;
@@ -94,12 +99,14 @@
 }
 
 .done-todos-title {
+  margin: 50px 140px 0 0;
   font-size: 24px;
   color: rgb(64, 60, 97);
-  margin: 50px 0 0 745px;
+  text-align: center;
 }
 
 .todo-done-task {
-  margin: 10px 0 0 745px;
+  margin: 10px 360px 0 0;
+  text-align: center;
   color: rgb(64, 60, 97);
 }

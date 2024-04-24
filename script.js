@@ -53,5 +53,4 @@ buttonAddNode.addEventListener("click", function () {
   }
 });
 
-// сделать кнопки через константы а не ls
-// задавать индексы через класс каждой кнопке в buttonaddnode event
+// СДЕЛАТЬ АДАПТИВ!!!!!
