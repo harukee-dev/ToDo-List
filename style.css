@@ -18,7 +18,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 0 0 10px;
+  margin: 0 0 0 80px;
+  flex-wrap: wrap;
 }
 
 .todo-button {
@@ -106,7 +107,37 @@
 }
 
 .todo-done-task {
-  margin: 10px 360px 0 0;
-  text-align: center;
+  margin: 5px 0 0 39.5%;
   color: rgb(64, 60, 97);
+}
+
+.new-string-subitem {
+  display: flex;
+  width: 100%;
+  margin: 10px 200px 0 0;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox-subitem {
+  width: 20px;
+  height: 20px;
+}
+
+.input-todo-div-subitem {
+  width: 200px;
+  margin: 0 0 0 0;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  outline: none;
+  border-radius: 5px;
+  text-align: center;
+  height: 17px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.269);
+  transition: 100ms;
+}
+
+.input-todo-div-subitem:hover {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.692);
 }

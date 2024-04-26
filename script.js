@@ -14,7 +14,7 @@ buttonAddNode.addEventListener("click", function () {
     let div = document.createElement("div");
     div.className = `new-todo div${id}`;
     div.innerHTML = `<input type="text" placeholder="введите корректное название" maxlength="27" id="${id}" class="input-todo-div " value="${inputAddNode.value}"> <button id="${id}" class="button-delete-js${id} todo-button">
-  delete</button><button id="${id}" class="button-done-js${id} todo-button">done</button>`;
+  delete</button><button id="${id}" class="button-done-js${id} todo-button">done</button><button id="${id}" class="todo-button add-subitem-button${id}">+</button>`;
     todoDiv.append(div);
     inputAddNode.value = "";
     buttonDeleteNode = document.querySelector(`.button-delete-js${id}`);
@@ -47,6 +47,13 @@ buttonAddNode.addEventListener("click", function () {
           event.target.value = "";
         }
       });
+    let buttonAddSubitem = document.querySelector(`.add-subitem-button${id}`);
+    buttonAddSubitem.addEventListener("click", function (event) {
+      let subitemDiv = document.createElement("div");
+      subitemDiv.className = "new-string-subitem";
+      subitemDiv.innerHTML = `<input class="checkbox-subitem" type="checkbox"><input type="text" placeholder="введите подпункт" maxlength="27" class="input-todo-div-subitem" value="Пункт">`;
+      document.querySelector(`.div${event.target.id}`).append(subitemDiv);
+    });
   } else {
     inputAddNode.placeholder = "введите корректное название";
     inputAddNode.value = "";
