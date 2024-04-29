@@ -18,13 +18,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 0 0 80px;
+  margin: 0 35px 0 0;
   flex-wrap: wrap;
 }
 
 .todo-button {
   margin: 20px 5px 0 0;
-  width: 70px;
+  width: 30px;
   height: 22px;
   border: none;
   border-radius: 5px;
@@ -60,9 +60,11 @@
 }
 
 .done-todos-div {
-  display: block;
+  margin: 20px 90px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
-
 .input-add {
   width: 300px;
   height: 30px;
@@ -100,21 +102,19 @@
 }
 
 .done-todos-title {
-  margin: 50px 140px 0 0;
   font-size: 24px;
   color: rgb(64, 60, 97);
-  text-align: center;
 }
 
 .todo-done-task {
-  margin: 5px 0 0 39.5%;
+  margin: 5px 0 0 0;
   color: rgb(64, 60, 97);
 }
 
 .new-string-subitem {
   display: flex;
   width: 100%;
-  margin: 10px 200px 0 0;
+  margin: 10px 70px 0 0;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -140,4 +140,36 @@
 
 .input-todo-div-subitem:hover {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.692);
+}
+
+.delete-subitem {
+  margin: 0 0 0 5px;
+  width: 30px;
+  height: 17px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(122, 110, 252);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.371);
+  color: white;
+  transition: 100ms;
+}
+
+.delete-subitem:hover {
+  background-color: rgb(141, 131, 255);
+}
+
+.delete-subitem-button-style {
+  margin: 0 0 0 5px;
+  width: 30px;
+  height: 22px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(122, 110, 252);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.371);
+  color: white;
+  transition: 100ms;
+}
+
+.delete-subitem-button-style:hover {
+  background-color: rgb(141, 131, 255);
 }
