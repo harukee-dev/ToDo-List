@@ -13,8 +13,10 @@ function buttonAddFunc() {
     id++;
     let div = document.createElement("div");
     div.className = `new-todo div${id}`;
-    div.innerHTML = `<input type="text" placeholder="введите корректное название" maxlength="27" id="${id}" class="input-todo-div " value="${inputAddNode.value}"> <button id="${id}" class="button-delete-js${id} todo-button">
-  X</button><button id="${id}" class="button-done-js${id} todo-button">✓</button><button id="${id}" class="todo-button add-subitem-button${id}">+</button>`;
+    div.innerHTML = `<input type="text" placeholder="введите корректное название" maxlength="27" id="${id}"
+     class="input-todo-div " value="${inputAddNode.value}"> <button id="${id}" class="button-delete-js${id} todo-button">
+  X</button><button id="${id}" class="button-done-js${id} todo-button">✓</button><button id="${id}" class="todo-button
+   add-subitem-button${id}">+</button>`;
     todoDiv.append(div);
     inputAddNode.value = "";
     buttonDeleteNode = document.querySelector(`.button-delete-js${id}`);
@@ -35,12 +37,38 @@ function buttonAddFunc() {
             document.querySelectorAll(`.item-checkbox${event.target.id}`)
           ).every((checkbox) => checkbox.checked)
         ) {
-          doneTodosDiv.innerHTML =
-            doneTodosDiv.innerHTML +
-            `<div class="todo-done-task">· ${
-              document.getElementById(`${event.target.id}`).value
-            }</div>`;
+          if (
+            document.querySelector(".delete-done-tasks-button").innerHTML ===
+            "свернуть"
+          ) {
+            doneTodosDiv.innerHTML =
+              doneTodosDiv.innerHTML +
+              `<div class="todo-done-task">· ${
+                document.getElementById(`${event.target.id}`).value
+              }</div>`;
+          } else {
+            doneTodosDiv.innerHTML =
+              doneTodosDiv.innerHTML +
+              `<div hidden="true" class="todo-done-task">· ${
+                document.getElementById(`${event.target.id}`).value
+              }</div>`;
+          }
           document.querySelector(`.div${event.target.id}`).remove(todoDiv);
+          document
+            .querySelector(".delete-done-tasks-button")
+            .addEventListener("click", function (event) {
+              if (event.target.innerHTML === "свернуть") {
+                document
+                  .querySelectorAll(".todo-done-task")
+                  .forEach((el) => (el.hidden = true));
+                event.target.innerHTML = "развернуть";
+              } else {
+                document
+                  .querySelectorAll(".todo-done-task")
+                  .forEach((el) => (el.hidden = false));
+                event.target.innerHTML = "свернуть";
+              }
+            });
         } else {
           alert("не все пункты выполнены!");
         }
@@ -61,7 +89,8 @@ function buttonAddFunc() {
     buttonAddSubitem.addEventListener("click", function (event) {
       let subitemDiv = document.createElement("div");
       subitemDiv.className = `new-string-subitem subitem-div${event.target.id}`;
-      subitemDiv.innerHTML = `<input class="checkbox-subitem item-checkbox${event.target.id}" type="checkbox"><input type="text" placeholder="введите пункт" maxlength="27" class="input-todo-div-subitem" value="пункт">
+      subitemDiv.innerHTML = `<input class="checkbox-subitem item-checkbox${event.target.id}" 
+      type="checkbox"><input type="text" placeholder="введите пункт" maxlength="27" class="input-todo-div-subitem" value="пункт">
       <button class="delete-subitem-button-style delete-subitem-button${event.target.id}">X</button>`;
       document.querySelector(`.div${event.target.id}`).append(subitemDiv);
       document
